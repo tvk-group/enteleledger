@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EnteleLEDGER™ | Enterprise Distributed Ledger Infrastructure</title>
+  <meta name="description" content="EnteleLEDGER™ is the enterprise trust and ledger infrastructure of the EnteleKRON ecosystem, built for immutable records, digital asset registries, compliance, AI analytics, and secure institutional workflows." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#07111f; --muted:#5d6b7a; --soft:#f4f7fb; --line:#dfe7f1;
+      --blue:#0b5cff; --cyan:#00a7d8; --navy:#071b3a; --green:#20b486; --gold:#c9972f;
+      --shadow:0 24px 80px rgba(7,17,31,.10); --radius:28px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,92vw);margin:0 auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(223,231,241,.85)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.04em;font-size:22px}
+    .mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--blue) 55%,var(--cyan));display:grid;place-items:center;color:white;font-weight:900;box-shadow:0 14px 36px rgba(11,92,255,.25)}
+    .navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700;color:#26374a}
+    .navlinks a:hover{color:var(--blue)}
+    .lang{position:relative}
+    .lang button{border:1px solid var(--line);background:white;border-radius:999px;padding:11px 15px;font-weight:800;cursor:pointer;box-shadow:0 10px 26px rgba(7,17,31,.06)}
+    .lang-menu{position:absolute;right:0;top:46px;width:250px;max-height:390px;overflow:auto;background:white;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:10px;display:none}
+    .lang:hover .lang-menu,.lang:focus-within .lang-menu{display:grid;grid-template-columns:1fr;gap:4px}
+    .lang-menu a{padding:10px 12px;border-radius:12px;font-size:13px;font-weight:700;color:#324357}
+    .lang-menu a:hover{background:var(--soft);color:var(--blue)}
+    .mobile{display:none}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 10% 0%,#eaf6ff 0,transparent 34%),radial-gradient(circle at 90% 10%,#edf4ff 0,transparent 36%),linear-gradient(180deg,#fff 0,#f7fbff 100%);border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:96px 0 80px}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid #d7e5ff;background:#fff;border-radius:999px;padding:9px 14px;font-weight:900;color:var(--blue);font-size:13px;box-shadow:0 10px 28px rgba(11,92,255,.08)}
+    h1{font-size:clamp(46px,6vw,82px);line-height:.92;letter-spacing:-.07em;margin:24px 0 20px}
+    .grad{background:linear-gradient(90deg,var(--navy),var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:20px;line-height:1.7;color:#425164;max-width:670px;margin:0 0 32px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 22px;font-weight:900;border:1px solid transparent;transition:.2s}
+    .btn.primary{background:var(--ink);color:white;box-shadow:0 20px 50px rgba(7,17,31,.18)}
+    .btn.secondary{background:white;border-color:var(--line);color:var(--ink)}
+    .btn:hover{transform:translateY(-2px)}
+    .visual{position:relative;min-height:540px;border-radius:36px;background:linear-gradient(155deg,#061326,#0b3372 55%,#05a7d8);box-shadow:var(--shadow);overflow:hidden;color:white;padding:30px}
+    .gridline{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at 60% 40%,#000 0,transparent 74%)}
+    .node{position:absolute;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border-radius:22px;padding:17px;box-shadow:0 18px 60px rgba(0,0,0,.2)}
+    .n1{left:34px;top:42px;width:220px}.n2{right:36px;top:96px;width:230px}.n3{left:70px;bottom:60px;width:250px}.n4{right:54px;bottom:72px;width:245px}
+    .node strong{display:block;font-size:15px;margin-bottom:6px}.node span{font-size:12px;color:rgba(255,255,255,.78);line-height:1.5}
+    .orb{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:185px;height:185px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff,#67e7ff 18%,#0b5cff 55%,#061326);box-shadow:0 0 0 24px rgba(255,255,255,.06),0 0 100px rgba(0,167,216,.55);display:grid;place-items:center;font-weight:900;font-size:28px;letter-spacing:-.07em}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-38px;position:relative;z-index:4}
+    .stat{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 18px 58px rgba(7,17,31,.08)}
+    .stat b{font-size:28px;display:block;letter-spacing:-.04em}.stat span{color:var(--muted);font-weight:700;font-size:13px}
+    section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:34px}.section-head h2{font-size:clamp(32px,4vw,54px);line-height:1;letter-spacing:-.055em;margin:0}.section-head p{max-width:520px;color:var(--muted);line-height:1.7;margin:0;font-weight:600}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 18px 60px rgba(7,17,31,.06)}
+    .icon{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#eaf3ff,#fff);display:grid;place-items:center;color:var(--blue);font-weight:900;margin-bottom:18px;border:1px solid var(--line)}
+    .card h3{margin:0 0 10px;font-size:22px;letter-spacing:-.03em}.card p{margin:0;color:var(--muted);line-height:1.65;font-weight:550}
+    .band{background:#07111f;color:white}.band .section-head p,.band .card p{color:#b6c2d1}.band .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);box-shadow:none}.band .icon{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#67e7ff}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}.step{background:var(--soft);border:1px solid var(--line);border-radius:24px;padding:24px;position:relative}.step:before{counter-increment:step;content:'0' counter(step);display:block;color:var(--blue);font-weight:900;margin-bottom:18px}.step h3{margin:0 0 8px}.step p{margin:0;color:var(--muted);line-height:1.6;font-weight:550}
+    .industries{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.industry{border:1px solid var(--line);background:white;border-radius:20px;padding:18px;font-weight:900;color:#24364a;display:flex;gap:10px;align-items:center}.dot{width:9px;height:9px;border-radius:50%;background:var(--green)}
+    .ecosystem{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.eco{padding:22px;border-radius:22px;background:linear-gradient(180deg,#fff,#f7fbff);border:1px solid var(--line)}.eco strong{display:block;margin-bottom:7px}.eco span{font-size:13px;color:var(--muted);font-weight:650;line-height:1.5}
+    .contact{background:linear-gradient(135deg,#f6fbff,#fff);border:1px solid var(--line);border-radius:36px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:32px;box-shadow:var(--shadow)}
+    .contact h2{font-size:44px;letter-spacing:-.055em;line-height:1;margin:0 0 16px}.contact p{color:var(--muted);line-height:1.7;font-weight:600}.contact-list{display:grid;gap:12px}.contact-item{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;font-weight:800;color:#24364a}
+    footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted);font-weight:650}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot b{color:var(--ink)}
+    @media (max-width:950px){.navlinks{display:none}.mobile{display:block}.hero-grid,.contact{grid-template-columns:1fr}.visual{min-height:460px}.stats,.cards,.flow,.industries,.ecosystem{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:14px}}
+    @media (max-width:620px){.stats,.cards,.flow,.industries,.ecosystem{grid-template-columns:1fr}.hero-grid{padding:62px 0}.visual{min-height:520px}.node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto!important;margin-bottom:12px}.orb{position:relative;left:auto;top:auto;transform:none;margin:16px auto}.nav{height:auto;padding:16px 0}.brand{font-size:18px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home"><span class="mark">EL</span><span>EnteleLEDGER™</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#solutions">Solutions</a><a href="#technology">Technology</a><a href="#security">Security</a><a href="#industries">Industries</a><a href="#ecosystem">Ecosystem</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="lang">
+        <button aria-label="Language selector">🌐 Language</button>
+        <div class="lang-menu" role="menu">
+          <a href="#" data-lang="en">English</a><a href="#" data-lang="tr">Türkçe</a><a href="#" data-lang="de">Deutsch</a><a href="#" data-lang="fr">Français</a><a href="#" data-lang="it">Italiano</a><a href="#" data-lang="es">Español</a><a href="#" data-lang="nl">Nederlands</a><a href="#" data-lang="pl">Polski</a><a href="#" data-lang="pt">Português</a><a href="#" data-lang="ro">Română</a><a href="#" data-lang="sv">Svenska</a><a href="#" data-lang="da">Dansk</a><a href="#" data-lang="fi">Suomi</a><a href="#" data-lang="cs">Čeština</a><a href="#" data-lang="sk">Slovenčina</a><a href="#" data-lang="hu">Magyar</a><a href="#" data-lang="el">Ελληνικά</a><a href="#" data-lang="bg">Български</a><a href="#" data-lang="ru">Русский</a><a href="#" data-lang="uk">Українська</a><a href="#" data-lang="ar">العربية</a><a href="#" data-lang="zh">中文</a><a href="#" data-lang="ja">日本語</a><a href="#" data-lang="ko">한국어</a><a href="#" data-lang="hi">हिन्दी</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Enterprise Ledger Infrastructure • EnteleKRON Ecosystem</div>
+          <h1>The <span class="grad">trust layer</span> for intelligent digital economies.</h1>
+          <p class="lead">EnteleLEDGER™ is an enterprise-grade distributed ledger platform for immutable records, digital asset registries, audit trails, identity-linked transactions, and compliance-ready infrastructure across global institutions.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Request Partnership</a>
+            <a class="btn secondary" href="#technology">Explore Technology</a>
+          </div>
+        </div>
+        <div class="visual" aria-label="EnteleLEDGER infrastructure visual">
+          <div class="gridline"></div>
+          <div class="orb">LEDGER</div>
+          <div class="node n1"><strong>Immutable Records</strong><span>Cryptographic audit trails for institutional workflows.</span></div>
+          <div class="node n2"><strong>Digital Asset Registry</strong><span>Tokenized assets, ownership layers, and verified transfers.</span></div>
+          <div class="node n3"><strong>Compliance Layer</strong><span>ISO 20022-ready messaging and structured reporting.</span></div>
+          <div class="node n4"><strong>SOVRA Intelligence</strong><span>AI-assisted monitoring, analytics, and risk signals.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap stats">
+      <div class="stat"><b>24/7</b><span>Audit continuity</span></div>
+      <div class="stat"><b>ISO</b><span>Compliance architecture</span></div>
+      <div class="stat"><b>AI</b><span>SOVRA analytics layer</span></div>
+      <div class="stat"><b>∞</b><span>Interoperable design</span></div>
+    </div>
+
+    <section id="solutions">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Built for serious institutions.</h2>
+          <p>A secure ledger foundation for enterprises, governments, financial systems, industrial networks, and high-value digital coordination.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">01</div><h3>Enterprise Records</h3><p>Preserve contractual, financial, operational, and identity events with verifiable, tamper-resistant records.</p></article>
+          <article class="card"><div class="icon">02</div><h3>Asset Registry</h3><p>Create verified registries for digital assets, physical assets, certificates, ownership rights, and structured claims.</p></article>
+          <article class="card"><div class="icon">03</div><h3>Institutional Workflows</h3><p>Coordinate multi-party approvals, signatures, compliance checkpoints, and settlement references across organizations.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="technology" class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Ledger intelligence, not just storage.</h2>
+          <p>EnteleLEDGER connects secure records with AI, identity, timestamping, compliance, and cross-chain interoperability.</p>
+        </div>
+        <div class="flow">
+          <div class="step"><h3>Record</h3><p>Events, transactions, documents, signatures, and asset states enter the ledger layer.</p></div>
+          <div class="step"><h3>Verify</h3><p>GraphVAULT, ChronoSEAL, and identity modules strengthen provenance and proof.</p></div>
+          <div class="step"><h3>Analyze</h3><p>SOVRA monitors patterns, anomalies, risk signals, and operational intelligence.</p></div>
+          <div class="step"><h3>Integrate</h3><p>EnteleLINK and ISO 20022-ready structures connect external systems and chains.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Security and compliance by design.</h2>
+          <p>Designed for environments where evidence, responsibility, traceability, and controlled access matter.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">🔐</div><h3>Zero-Trust Access</h3><p>Role-based access, controlled signing, verification layers, and institutional-grade permission structures.</p></article>
+          <article class="card"><div class="icon">⏱</div><h3>ChronoSEAL Proof</h3><p>Timestamped proof-of-action for documents, decisions, transfers, approvals, and critical records.</p></article>
+          <article class="card"><div class="icon">📊</div><h3>Audit Trails</h3><p>Transparent historical visibility for legal, financial, governance, and operational review processes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" style="background:var(--soft)">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Industry coverage.</h2>
+          <p>One ledger foundation for many high-trust sectors.</p>
+        </div>
+        <div class="industries">
+          <div class="industry"><span class="dot"></span>Banking & Finance</div><div class="industry"><span class="dot"></span>Government</div><div class="industry"><span class="dot"></span>Supply Chain</div><div class="industry"><span class="dot"></span>Energy</div><div class="industry"><span class="dot"></span>Healthcare</div><div class="industry"><span class="dot"></span>Real Estate</div><div class="industry"><span class="dot"></span>Manufacturing</div><div class="industry"><span class="dot"></span>Digital Identity</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Connected to the EnteleKRON stack.</h2>
+          <p>EnteleLEDGER is designed as the institutional ledger layer within a wider sovereign technology ecosystem.</p>
+        </div>
+        <div class="ecosystem">
+          <div class="eco"><strong>EnteleKRON</strong><span>Sovereign modular blockchain ecosystem.</span></div>
+          <div class="eco"><strong>EnteleLINK</strong><span>Cross-chain and system interoperability.</span></div>
+          <div class="eco"><strong>GraphVAULT</strong><span>Verified data and knowledge structure.</span></div>
+          <div class="eco"><strong>ChronoSEAL</strong><span>Cryptographic timestamping layer.</span></div>
+          <div class="eco"><strong>EnteleWALLET</strong><span>Secure wallet and user access layer.</span></div>
+          <div class="eco"><strong>TVK Wallet</strong><span>Group-level wallet infrastructure.</span></div>
+          <div class="eco"><strong>SOVRA</strong><span>AI intelligence and monitoring engine.</span></div>
+          <div class="eco"><strong>Q-Presence</strong><span>Proof-of-presence and biometric identity layer.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2>Build trusted infrastructure with EnteleLEDGER.</h2>
+          <p>For enterprise partnerships, institutional pilots, government-grade registries, asset verification systems, or ecosystem integrations, contact the TVK Labs team.</p>
+          <div class="cta"><a class="btn primary" href="mailto:contact@enteleledger.com">Contact Team</a><a class="btn secondary" href="mailto:hq@tvk.group">TVK Group HQ</a></div>
+        </div>
+        <div class="contact-list">
+          <div class="contact-item">contact@enteleledger.com</div>
+          <div class="contact-item">legal@tvk.group</div>
+          <div class="contact-item">hq@tvk.group</div>
+          <div class="contact-item">Türkiye • United Kingdom • Europe • Global</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div><b>EnteleLEDGER™</b> — Enterprise Distributed Ledger Infrastructure.</div>
+      <div>© 2026 TVK Labs / TVK Group. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      tr:{hero:'Dijital ekonomiler için güven ve kayıt altyapısı.',btn:'Ortaklık Talep Et'},
+      de:{hero:'Die Vertrauens- und Ledger-Infrastruktur für digitale Ökonomien.',btn:'Partnerschaft anfragen'},
+      fr:{hero:'La couche de confiance pour les économies numériques intelligentes.',btn:'Demander un partenariat'},
+      es:{hero:'La capa de confianza para economías digitales inteligentes.',btn:'Solicitar asociación'},
+      it:{hero:'Il livello di fiducia per economie digitali intelligenti.',btn:'Richiedi partnership'},
+      en:{hero:'The trust layer for intelligent digital economies.',btn:'Request Partnership'}
+    };
+    document.querySelectorAll('.lang-menu a').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const l=a.dataset.lang;
+        if(translations[l]){
+          document.querySelector('h1').innerHTML = translations[l].hero.replace('trust','<span class="grad">trust</span>');
+          document.querySelector('.btn.primary').textContent = translations[l].btn;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
