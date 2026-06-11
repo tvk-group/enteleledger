@@ -98,10 +98,8 @@
       const key = el.getAttribute('data-i18n');
       const val = getNested(t, key);
       if (val === null) return;
-      if (key === 'hero.sub') {
-        el.innerHTML = val;
-      } else if (key === 'hero.title') {
-        el.textContent = val;
+      if (key === 'hero.sub' || key === 'core.hub') {
+        el.innerHTML = String(val).replace(/\n/g, '<br>');
       } else {
         el.textContent = val;
       }

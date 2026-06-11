@@ -441,6 +441,8 @@ section.dark .section-label { color: var(--gold-light); }
   font-size: 15px;
   font-weight: 700;
   text-align: center;
+  white-space: pre-line;
+  line-height: 1.15;
   z-index: 10;
   box-shadow: 0 0 0 12px rgba(11, 92, 255, 0.08), 0 0 0 24px rgba(184, 148, 63, 0.06), var(--shadow);
   animation: hub-glow 4s ease-in-out infinite;
