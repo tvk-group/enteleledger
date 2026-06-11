@@ -19,8 +19,15 @@ https://enteleledger.com
 - `scripts/` — locale source files and i18n build script
 
 ## Deployment
-Vercel settings:
+Vercel settings (static site — no build step):
 - Framework Preset: Other
 - Build Command: leave empty
 - Output Directory: leave empty
 - Install Command: leave empty
+
+`js/i18n.js` is committed pre-built. Regenerate locally before committing translation changes:
+```bash
+npm run build:i18n
+```
+
+Production URL: https://www.enteleledger.com (apex redirects to www)
