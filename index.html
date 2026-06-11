@@ -3,203 +3,511 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EnteleLEDGER™ | Enterprise Distributed Ledger Infrastructure</title>
-  <meta name="description" content="EnteleLEDGER™ is the enterprise trust and ledger infrastructure of the EnteleKRON ecosystem, built for immutable records, digital asset registries, compliance, AI analytics, and secure institutional workflows." />
+  <title>EnteleLEDGER | The Permanent Record Layer of the ENTELΞKRON Ecosystem</title>
+  <meta name="description" content="EnteleLEDGER is the Truth Layer — permanent memory infrastructure where identity, governance, intelligence, proof, trust, and infrastructure records are preserved through sovereign digital permanence." />
   <meta name="theme-color" content="#ffffff" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff; --ink:#07111f; --muted:#5d6b7a; --soft:#f4f7fb; --line:#dfe7f1;
-      --blue:#0b5cff; --cyan:#00a7d8; --navy:#071b3a; --green:#20b486; --gold:#c9972f;
-      --shadow:0 24px 80px rgba(7,17,31,.10); --radius:28px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1180px,92vw);margin:0 auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(223,231,241,.85)}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.04em;font-size:22px}
-    .mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--blue) 55%,var(--cyan));display:grid;place-items:center;color:white;font-weight:900;box-shadow:0 14px 36px rgba(11,92,255,.25)}
-    .navlinks{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700;color:#26374a}
-    .navlinks a:hover{color:var(--blue)}
-    .lang{position:relative}
-    .lang button{border:1px solid var(--line);background:white;border-radius:999px;padding:11px 15px;font-weight:800;cursor:pointer;box-shadow:0 10px 26px rgba(7,17,31,.06)}
-    .lang-menu{position:absolute;right:0;top:46px;width:250px;max-height:390px;overflow:auto;background:white;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:10px;display:none}
-    .lang:hover .lang-menu,.lang:focus-within .lang-menu{display:grid;grid-template-columns:1fr;gap:4px}
-    .lang-menu a{padding:10px 12px;border-radius:12px;font-size:13px;font-weight:700;color:#324357}
-    .lang-menu a:hover{background:var(--soft);color:var(--blue)}
-    .mobile{display:none}
-    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 10% 0%,#eaf6ff 0,transparent 34%),radial-gradient(circle at 90% 10%,#edf4ff 0,transparent 36%),linear-gradient(180deg,#fff 0,#f7fbff 100%);border-bottom:1px solid var(--line)}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:96px 0 80px}
-    .eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid #d7e5ff;background:#fff;border-radius:999px;padding:9px 14px;font-weight:900;color:var(--blue);font-size:13px;box-shadow:0 10px 28px rgba(11,92,255,.08)}
-    h1{font-size:clamp(46px,6vw,82px);line-height:.92;letter-spacing:-.07em;margin:24px 0 20px}
-    .grad{background:linear-gradient(90deg,var(--navy),var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{font-size:20px;line-height:1.7;color:#425164;max-width:670px;margin:0 0 32px}
-    .cta{display:flex;gap:14px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 22px;font-weight:900;border:1px solid transparent;transition:.2s}
-    .btn.primary{background:var(--ink);color:white;box-shadow:0 20px 50px rgba(7,17,31,.18)}
-    .btn.secondary{background:white;border-color:var(--line);color:var(--ink)}
-    .btn:hover{transform:translateY(-2px)}
-    .visual{position:relative;min-height:540px;border-radius:36px;background:linear-gradient(155deg,#061326,#0b3372 55%,#05a7d8);box-shadow:var(--shadow);overflow:hidden;color:white;padding:30px}
-    .gridline{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at 60% 40%,#000 0,transparent 74%)}
-    .node{position:absolute;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border-radius:22px;padding:17px;box-shadow:0 18px 60px rgba(0,0,0,.2)}
-    .n1{left:34px;top:42px;width:220px}.n2{right:36px;top:96px;width:230px}.n3{left:70px;bottom:60px;width:250px}.n4{right:54px;bottom:72px;width:245px}
-    .node strong{display:block;font-size:15px;margin-bottom:6px}.node span{font-size:12px;color:rgba(255,255,255,.78);line-height:1.5}
-    .orb{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:185px;height:185px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff,#67e7ff 18%,#0b5cff 55%,#061326);box-shadow:0 0 0 24px rgba(255,255,255,.06),0 0 100px rgba(0,167,216,.55);display:grid;place-items:center;font-weight:900;font-size:28px;letter-spacing:-.07em}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-38px;position:relative;z-index:4}
-    .stat{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 18px 58px rgba(7,17,31,.08)}
-    .stat b{font-size:28px;display:block;letter-spacing:-.04em}.stat span{color:var(--muted);font-weight:700;font-size:13px}
-    section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:34px}.section-head h2{font-size:clamp(32px,4vw,54px);line-height:1;letter-spacing:-.055em;margin:0}.section-head p{max-width:520px;color:var(--muted);line-height:1.7;margin:0;font-weight:600}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 18px 60px rgba(7,17,31,.06)}
-    .icon{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#eaf3ff,#fff);display:grid;place-items:center;color:var(--blue);font-weight:900;margin-bottom:18px;border:1px solid var(--line)}
-    .card h3{margin:0 0 10px;font-size:22px;letter-spacing:-.03em}.card p{margin:0;color:var(--muted);line-height:1.65;font-weight:550}
-    .band{background:#07111f;color:white}.band .section-head p,.band .card p{color:#b6c2d1}.band .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);box-shadow:none}.band .icon{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#67e7ff}
-    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}.step{background:var(--soft);border:1px solid var(--line);border-radius:24px;padding:24px;position:relative}.step:before{counter-increment:step;content:'0' counter(step);display:block;color:var(--blue);font-weight:900;margin-bottom:18px}.step h3{margin:0 0 8px}.step p{margin:0;color:var(--muted);line-height:1.6;font-weight:550}
-    .industries{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.industry{border:1px solid var(--line);background:white;border-radius:20px;padding:18px;font-weight:900;color:#24364a;display:flex;gap:10px;align-items:center}.dot{width:9px;height:9px;border-radius:50%;background:var(--green)}
-    .ecosystem{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.eco{padding:22px;border-radius:22px;background:linear-gradient(180deg,#fff,#f7fbff);border:1px solid var(--line)}.eco strong{display:block;margin-bottom:7px}.eco span{font-size:13px;color:var(--muted);font-weight:650;line-height:1.5}
-    .contact{background:linear-gradient(135deg,#f6fbff,#fff);border:1px solid var(--line);border-radius:36px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:32px;box-shadow:var(--shadow)}
-    .contact h2{font-size:44px;letter-spacing:-.055em;line-height:1;margin:0 0 16px}.contact p{color:var(--muted);line-height:1.7;font-weight:600}.contact-list{display:grid;gap:12px}.contact-item{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;font-weight:800;color:#24364a}
-    footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted);font-weight:650}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot b{color:var(--ink)}
-    @media (max-width:950px){.navlinks{display:none}.mobile{display:block}.hero-grid,.contact{grid-template-columns:1fr}.visual{min-height:460px}.stats,.cards,.flow,.industries,.ecosystem{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:14px}}
-    @media (max-width:620px){.stats,.cards,.flow,.industries,.ecosystem{grid-template-columns:1fr}.hero-grid{padding:62px 0}.visual{min-height:520px}.node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto!important;margin-bottom:12px}.orb{position:relative;left:auto;top:auto;transform:none;margin:16px auto}.nav{height:auto;padding:16px 0}.brand{font-size:18px}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#home"><span class="mark">EL</span><span>EnteleLEDGER™</span></a>
+      <a class="brand" href="#home">
+        <span class="mark">EL</span>
+        <span data-i18n="brand">EnteleLEDGER</span>
+      </a>
       <nav class="navlinks" aria-label="Main navigation">
-        <a href="#solutions">Solutions</a><a href="#technology">Technology</a><a href="#security">Security</a><a href="#industries">Industries</a><a href="#ecosystem">Ecosystem</a><a href="#contact">Contact</a>
+        <a href="#record-flow" data-i18n="nav.flow">Record Flow</a>
+        <a href="#memory-core" data-i18n="nav.memory">Memory Core</a>
+        <a href="#explorer" data-i18n="nav.explorer">Explorer</a>
+        <a href="#history" data-i18n="nav.history">History</a>
+        <a href="#trust" data-i18n="nav.trust">Trust</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="lang">
-        <button aria-label="Language selector">🌐 Language</button>
-        <div class="lang-menu" role="menu">
-          <a href="#" data-lang="en">English</a><a href="#" data-lang="tr">Türkçe</a><a href="#" data-lang="de">Deutsch</a><a href="#" data-lang="fr">Français</a><a href="#" data-lang="it">Italiano</a><a href="#" data-lang="es">Español</a><a href="#" data-lang="nl">Nederlands</a><a href="#" data-lang="pl">Polski</a><a href="#" data-lang="pt">Português</a><a href="#" data-lang="ro">Română</a><a href="#" data-lang="sv">Svenska</a><a href="#" data-lang="da">Dansk</a><a href="#" data-lang="fi">Suomi</a><a href="#" data-lang="cs">Čeština</a><a href="#" data-lang="sk">Slovenčina</a><a href="#" data-lang="hu">Magyar</a><a href="#" data-lang="el">Ελληνικά</a><a href="#" data-lang="bg">Български</a><a href="#" data-lang="ru">Русский</a><a href="#" data-lang="uk">Українська</a><a href="#" data-lang="ar">العربية</a><a href="#" data-lang="zh">中文</a><a href="#" data-lang="ja">日本語</a><a href="#" data-lang="ko">한국어</a><a href="#" data-lang="hi">हिन्दी</a>
-        </div>
+        <button class="lang-btn" aria-label="Language selector" id="langBtn">🌐 <span data-i18n="lang.label">Language</span></button>
+        <div class="lang-menu" id="langMenu" role="menu"></div>
       </div>
     </div>
   </header>
 
   <main id="home">
+    <!-- HERO -->
     <section class="hero">
-      <div class="wrap hero-grid">
+      <div class="wrap hero-inner">
         <div>
-          <div class="eyebrow">Enterprise Ledger Infrastructure • EnteleKRON Ecosystem</div>
-          <h1>The <span class="grad">trust layer</span> for intelligent digital economies.</h1>
-          <p class="lead">EnteleLEDGER™ is an enterprise-grade distributed ledger platform for immutable records, digital asset registries, audit trails, identity-linked transactions, and compliance-ready infrastructure across global institutions.</p>
-          <div class="cta">
-            <a class="btn primary" href="#contact">Request Partnership</a>
-            <a class="btn secondary" href="#technology">Explore Technology</a>
+          <div class="eyebrow" data-i18n="hero.eyebrow">Truth Layer · Record Layer · System of Record</div>
+          <h1 data-i18n="hero.title">EnteleLEDGER</h1>
+          <p class="hero-sub" data-i18n="hero.sub">The Permanent Record Layer of the ENTEL<span class="xi">Ξ</span>KRON Ecosystem.</p>
+          <p class="hero-lead" data-i18n="hero.lead">Identity, governance, intelligence, proof, trust, and infrastructure records preserved through sovereign digital permanence.</p>
+        </div>
+        <div class="hero-visual" aria-label="Living timeline visualization">
+          <div class="timeline-infinite">
+            <div class="timeline-track">
+              <span class="timeline-event"></span>
+              <span class="timeline-event gold"></span>
+              <span class="timeline-event"></span>
+              <span class="timeline-event gold"></span>
+              <span class="timeline-event"></span>
+              <span class="timeline-event gold"></span>
+              <span class="flow-particle"></span>
+              <span class="flow-particle blue"></span>
+              <span class="flow-particle"></span>
+            </div>
+            <div class="hero-caption">
+              <span data-i18n="hero.cap1">Events become records</span>
+              <span data-i18n="hero.cap2">Records become history</span>
+              <span data-i18n="hero.cap3">History becomes truth</span>
+            </div>
           </div>
         </div>
-        <div class="visual" aria-label="EnteleLEDGER infrastructure visual">
-          <div class="gridline"></div>
-          <div class="orb">LEDGER</div>
-          <div class="node n1"><strong>Immutable Records</strong><span>Cryptographic audit trails for institutional workflows.</span></div>
-          <div class="node n2"><strong>Digital Asset Registry</strong><span>Tokenized assets, ownership layers, and verified transfers.</span></div>
-          <div class="node n3"><strong>Compliance Layer</strong><span>ISO 20022-ready messaging and structured reporting.</span></div>
-          <div class="node n4"><strong>SOVRA Intelligence</strong><span>AI-assisted monitoring, analytics, and risk signals.</span></div>
-        </div>
       </div>
     </section>
 
-    <div class="wrap stats">
-      <div class="stat"><b>24/7</b><span>Audit continuity</span></div>
-      <div class="stat"><b>ISO</b><span>Compliance architecture</span></div>
-      <div class="stat"><b>AI</b><span>SOVRA analytics layer</span></div>
-      <div class="stat"><b>∞</b><span>Interoperable design</span></div>
-    </div>
-
-    <section id="solutions">
+    <!-- RECORD FLOW ENGINE -->
+    <section id="record-flow">
       <div class="wrap">
         <div class="section-head">
-          <h2>Built for serious institutions.</h2>
-          <p>A secure ledger foundation for enterprises, governments, financial systems, industrial networks, and high-value digital coordination.</p>
+          <div class="section-label" data-i18n="flow.label">Record Flow Engine</div>
+          <h2 data-i18n="flow.title">How information becomes permanent record</h2>
+          <p data-i18n="flow.desc">Every event passes through verification, timestamping, and archival — transforming transient moments into auditable, permanent truth.</p>
         </div>
-        <div class="cards">
-          <article class="card"><div class="icon">01</div><h3>Enterprise Records</h3><p>Preserve contractual, financial, operational, and identity events with verifiable, tamper-resistant records.</p></article>
-          <article class="card"><div class="icon">02</div><h3>Asset Registry</h3><p>Create verified registries for digital assets, physical assets, certificates, ownership rights, and structured claims.</p></article>
-          <article class="card"><div class="icon">03</div><h3>Institutional Workflows</h3><p>Coordinate multi-party approvals, signatures, compliance checkpoints, and settlement references across organizations.</p></article>
+        <div class="record-flow">
+          <div class="flow-pipeline" id="flowPipeline">
+            <div class="flow-step" data-step="0">
+              <div class="flow-step-icon">◇</div>
+              <h3 data-i18n="flow.s1">Event</h3>
+              <p data-i18n="flow.s1d">An occurrence enters the system</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" data-step="1">
+              <div class="flow-step-icon">✓</div>
+              <h3 data-i18n="flow.s2">Verification</h3>
+              <p data-i18n="flow.s2d">Authenticity and integrity confirmed</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" data-step="2">
+              <div class="flow-step-icon">⏱</div>
+              <h3 data-i18n="flow.s3">Timestamp</h3>
+              <p data-i18n="flow.s3d">ChronoSeal binds time to truth</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" data-step="3">
+              <div class="flow-step-icon">◈</div>
+              <h3 data-i18n="flow.s4">Record Creation</h3>
+              <p data-i18n="flow.s4d">Structured permanent record formed</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" data-step="4">
+              <div class="flow-step-icon">▣</div>
+              <h3 data-i18n="flow.s5">Permanent Storage</h3>
+              <p data-i18n="flow.s5d">Written to civilization memory</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step" data-step="5">
+              <div class="flow-step-icon">◎</div>
+              <h3 data-i18n="flow.s6">Auditability</h3>
+              <p data-i18n="flow.s6d">Forever verifiable and traceable</p>
+            </div>
+          </div>
+          <div class="flow-connector"></div>
         </div>
       </div>
     </section>
 
-    <section id="technology" class="band">
+    <!-- CIVILIZATION MEMORY CORE -->
+    <section id="memory-core" class="alt">
       <div class="wrap">
         <div class="section-head">
-          <h2>Ledger intelligence, not just storage.</h2>
-          <p>EnteleLEDGER connects secure records with AI, identity, timestamping, compliance, and cross-chain interoperability.</p>
+          <div class="section-label" data-i18n="core.label">Civilization Memory Core</div>
+          <h2 data-i18n="core.title">The architecture of permanent memory</h2>
+          <p data-i18n="core.desc">Every system in the ENTELΞKRON stack contributes records. All roads lead to EnteleLEDGER — the central truth repository.</p>
         </div>
-        <div class="flow">
-          <div class="step"><h3>Record</h3><p>Events, transactions, documents, signatures, and asset states enter the ledger layer.</p></div>
-          <div class="step"><h3>Verify</h3><p>GraphVAULT, ChronoSEAL, and identity modules strengthen provenance and proof.</p></div>
-          <div class="step"><h3>Analyze</h3><p>SOVRA monitors patterns, anomalies, risk signals, and operational intelligence.</p></div>
-          <div class="step"><h3>Integrate</h3><p>EnteleLINK and ISO 20022-ready structures connect external systems and chains.</p></div>
+        <div class="memory-core" id="memoryCore">
+          <div class="core-hub" data-i18n="core.hub">Entele<br>LEDGER</div>
+          <div class="core-node n1"><strong>ChronoSeal</strong><span data-i18n="core.chrono">Proof &amp; timestamping</span></div>
+          <div class="core-node n2"><strong>GraphVAULT</strong><span data-i18n="core.graph">Knowledge structure</span></div>
+          <div class="core-node n3"><strong>ENTELΞKRON</strong><span data-i18n="core.entel">Infrastructure layer</span></div>
+          <div class="core-node n4"><strong>SOVRA</strong><span data-i18n="core.sovra">Intelligence records</span></div>
+          <div class="core-node n5"><strong>Q-Presence</strong><span data-i18n="core.qp">Identity verification</span></div>
+          <div class="core-node n6"><strong>EnteleVAULT</strong><span data-i18n="core.vault">Secure preservation</span></div>
+          <div class="core-node n7"><strong>EnteleLINK</strong><span data-i18n="core.link">Connectivity layer</span></div>
+          <div class="core-node n8"><strong>EnteleSCAN</strong><span data-i18n="core.scan">Observability records</span></div>
         </div>
       </div>
     </section>
 
-    <section id="security">
+    <!-- RECORD EXPLORER -->
+    <section id="explorer">
       <div class="wrap">
         <div class="section-head">
-          <h2>Security and compliance by design.</h2>
-          <p>Designed for environments where evidence, responsibility, traceability, and controlled access matter.</p>
+          <div class="section-label" data-i18n="explorer.label">Record Explorer</div>
+          <h2 data-i18n="explorer.title">Categories of permanent record</h2>
+          <p data-i18n="explorer.desc">Not transactions. Not tokens. The record types that define civilization — identity, governance, proof, knowledge, and infrastructure.</p>
         </div>
-        <div class="cards">
-          <article class="card"><div class="icon">🔐</div><h3>Zero-Trust Access</h3><p>Role-based access, controlled signing, verification layers, and institutional-grade permission structures.</p></article>
-          <article class="card"><div class="icon">⏱</div><h3>ChronoSEAL Proof</h3><p>Timestamped proof-of-action for documents, decisions, transfers, approvals, and critical records.</p></article>
-          <article class="card"><div class="icon">📊</div><h3>Audit Trails</h3><p>Transparent historical visibility for legal, financial, governance, and operational review processes.</p></article>
+        <div class="explorer-grid" id="explorerGrid">
+          <div class="explorer-card active" data-cat="identity">
+            <div class="cat-icon">◉</div>
+            <h3 data-i18n="explorer.c1">Identity Records</h3>
+            <p data-i18n="explorer.c1d">Credentials, attestations, presence proofs</p>
+          </div>
+          <div class="explorer-card" data-cat="governance">
+            <div class="cat-icon">⚖</div>
+            <h3 data-i18n="explorer.c2">Governance Records</h3>
+            <p data-i18n="explorer.c2d">Proposals, decisions, approvals, archives</p>
+          </div>
+          <div class="explorer-card" data-cat="infrastructure">
+            <div class="cat-icon">⬡</div>
+            <h3 data-i18n="explorer.c3">Infrastructure Records</h3>
+            <p data-i18n="explorer.c3d">System state, deployments, configurations</p>
+          </div>
+          <div class="explorer-card" data-cat="proof">
+            <div class="cat-icon">◈</div>
+            <h3 data-i18n="explorer.c4">Proof Records</h3>
+            <p data-i18n="explorer.c4d">Timestamped evidence and attestations</p>
+          </div>
+          <div class="explorer-card" data-cat="knowledge">
+            <div class="cat-icon">◇</div>
+            <h3 data-i18n="explorer.c5">Knowledge Records</h3>
+            <p data-i18n="explorer.c5d">Verified observations and intelligence</p>
+          </div>
+          <div class="explorer-card" data-cat="compliance">
+            <div class="cat-icon">▣</div>
+            <h3 data-i18n="explorer.c6">Compliance Records</h3>
+            <p data-i18n="explorer.c6d">Audit trails, certifications, policies</p>
+          </div>
+          <div class="explorer-card" data-cat="security">
+            <div class="cat-icon">◎</div>
+            <h3 data-i18n="explorer.c7">Security Records</h3>
+            <p data-i18n="explorer.c7d">Access logs, incident reports, forensics</p>
+          </div>
+          <div class="explorer-card" data-cat="historical">
+            <div class="cat-icon">∞</div>
+            <h3 data-i18n="explorer.c8">Historical Records</h3>
+            <p data-i18n="explorer.c8d">Civilization timeline and legacy archives</p>
+          </div>
+        </div>
+        <div class="explorer-detail" id="explorerDetail">
+          <div>
+            <h4 id="detailTitle" data-i18n="explorer.c1">Identity Records</h4>
+            <p id="detailDesc" data-i18n="explorer.detail.identity">Permanent, verifiable identity attestations linked through Q-Presence verification and stored as auditable credentials.</p>
+          </div>
+          <div class="explorer-records" id="detailRecords"></div>
         </div>
       </div>
     </section>
 
-    <section id="industries" style="background:var(--soft)">
+    <!-- DIGITAL HISTORY ENGINE -->
+    <section id="history" class="alt">
       <div class="wrap">
         <div class="section-head">
-          <h2>Industry coverage.</h2>
-          <p>One ledger foundation for many high-trust sectors.</p>
+          <div class="section-label" data-i18n="history.label">Digital History Engine</div>
+          <h2 data-i18n="history.title">How history accumulates</h2>
+          <p data-i18n="history.desc">Every verified event joins an ever-growing timeline. Identity, governance, proof, infrastructure, and knowledge events weave the fabric of digital civilization.</p>
         </div>
-        <div class="industries">
-          <div class="industry"><span class="dot"></span>Banking & Finance</div><div class="industry"><span class="dot"></span>Government</div><div class="industry"><span class="dot"></span>Supply Chain</div><div class="industry"><span class="dot"></span>Energy</div><div class="industry"><span class="dot"></span>Healthcare</div><div class="industry"><span class="dot"></span>Real Estate</div><div class="industry"><span class="dot"></span>Manufacturing</div><div class="industry"><span class="dot"></span>Digital Identity</div>
+        <div class="history-timeline">
+          <div class="history-axis">
+            <div class="history-line"></div>
+            <div class="history-stream"></div>
+            <div class="history-marker" style="left:10%">
+              <span class="event-label" data-i18n="history.e1">Identity Event</span>
+              <div class="history-dot"></div>
+              <span>2019</span>
+            </div>
+            <div class="history-marker gold" style="left:28%">
+              <span class="event-label" data-i18n="history.e2">Governance Event</span>
+              <div class="history-dot"></div>
+              <span>2021</span>
+            </div>
+            <div class="history-marker" style="left:46%">
+              <span class="event-label" data-i18n="history.e3">Proof Event</span>
+              <div class="history-dot"></div>
+              <span>2023</span>
+            </div>
+            <div class="history-marker gold" style="left:64%">
+              <span class="event-label" data-i18n="history.e4">Infrastructure Event</span>
+              <div class="history-dot"></div>
+              <span>2025</span>
+            </div>
+            <div class="history-marker" style="left:82%">
+              <span class="event-label" data-i18n="history.e5">Knowledge Event</span>
+              <div class="history-dot"></div>
+              <span>2026</span>
+            </div>
+          </div>
+          <div class="history-categories">
+            <div class="history-cat"><span class="count" data-count="identity">12,847</span><span data-i18n="history.c1">Identity Events</span></div>
+            <div class="history-cat gold"><span class="count" data-count="governance">3,291</span><span data-i18n="history.c2">Governance Events</span></div>
+            <div class="history-cat"><span class="count" data-count="proof">8,456</span><span data-i18n="history.c3">Proof Events</span></div>
+            <div class="history-cat gold"><span class="count" data-count="infra">5,102</span><span data-i18n="history.c4">Infrastructure Events</span></div>
+            <div class="history-cat"><span class="count" data-count="knowledge">21,338</span><span data-i18n="history.c5">Knowledge Events</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="ecosystem">
+    <!-- TRUST ARCHITECTURE -->
+    <section id="trust">
       <div class="wrap">
         <div class="section-head">
-          <h2>Connected to the EnteleKRON stack.</h2>
-          <p>EnteleLEDGER is designed as the institutional ledger layer within a wider sovereign technology ecosystem.</p>
+          <div class="section-label" data-i18n="trust.label">Trust Architecture</div>
+          <h2 data-i18n="trust.title">How trust is created and preserved</h2>
+          <p data-i18n="trust.desc">ChronoSeal proves. EnteleLEDGER records. GraphVAULT transforms verified records into structured knowledge.</p>
         </div>
-        <div class="ecosystem">
-          <div class="eco"><strong>EnteleKRON</strong><span>Sovereign modular blockchain ecosystem.</span></div>
-          <div class="eco"><strong>EnteleLINK</strong><span>Cross-chain and system interoperability.</span></div>
-          <div class="eco"><strong>GraphVAULT</strong><span>Verified data and knowledge structure.</span></div>
-          <div class="eco"><strong>ChronoSEAL</strong><span>Cryptographic timestamping layer.</span></div>
-          <div class="eco"><strong>EnteleWALLET</strong><span>Secure wallet and user access layer.</span></div>
-          <div class="eco"><strong>TVK Wallet</strong><span>Group-level wallet infrastructure.</span></div>
-          <div class="eco"><strong>SOVRA</strong><span>AI intelligence and monitoring engine.</span></div>
-          <div class="eco"><strong>Q-Presence</strong><span>Proof-of-presence and biometric identity layer.</span></div>
+        <div class="trust-stack">
+          <div class="trust-layer">
+            <h3>ChronoSeal</h3>
+            <p data-i18n="trust.chrono">Cryptographic proof and sovereign timestamping</p>
+          </div>
+          <div class="trust-connector"></div>
+          <div class="trust-layer primary">
+            <h3>EnteleLEDGER</h3>
+            <p data-i18n="trust.ledger">Permanent record layer — system of truth</p>
+          </div>
+          <div class="trust-connector"></div>
+          <div class="trust-layer">
+            <h3>GraphVAULT</h3>
+            <p data-i18n="trust.graph">Verified records become structured knowledge</p>
+          </div>
+        </div>
+        <div class="trust-desc">
+          <div class="trust-desc-item">
+            <h4 data-i18n="trust.d1">Trust Created</h4>
+            <p data-i18n="trust.d1p">ChronoSeal binds cryptographic proof to every record at the moment of creation.</p>
+          </div>
+          <div class="trust-desc-item">
+            <h4 data-i18n="trust.d2">Records Verified</h4>
+            <p data-i18n="trust.d2p">EnteleLEDGER preserves verified records with full auditability and permanence.</p>
+          </div>
+          <div class="trust-desc-item">
+            <h4 data-i18n="trust.d3">Knowledge Formed</h4>
+            <p data-i18n="trust.d3p">GraphVAULT transforms verified records into interconnected, queryable knowledge.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- KNOWLEDGE PRESERVATION LAYER -->
+    <section id="knowledge" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label" data-i18n="knowledge.label">Knowledge Preservation Layer</div>
+          <h2 data-i18n="knowledge.title">From observation to eternal memory</h2>
+          <p data-i18n="knowledge.desc">The pathway from raw observation to preserved civilization knowledge — the core differentiator of EnteleLEDGER.</p>
+        </div>
+        <div class="knowledge-flow">
+          <div class="knowledge-step">
+            <div class="k-icon">👁</div>
+            <h4 data-i18n="knowledge.s1">Observation</h4>
+            <p data-i18n="knowledge.s1d">Raw signal captured</p>
+          </div>
+          <span class="knowledge-arrow">→</span>
+          <div class="knowledge-step">
+            <div class="k-icon">◈</div>
+            <h4 data-i18n="knowledge.s2">Record</h4>
+            <p data-i18n="knowledge.s2d">Structured and stored</p>
+          </div>
+          <span class="knowledge-arrow">→</span>
+          <div class="knowledge-step">
+            <div class="k-icon">✓</div>
+            <h4 data-i18n="knowledge.s3">Verification</h4>
+            <p data-i18n="knowledge.s3d">Integrity confirmed</p>
+          </div>
+          <span class="knowledge-arrow">→</span>
+          <div class="knowledge-step">
+            <div class="k-icon">◇</div>
+            <h4 data-i18n="knowledge.s4">Knowledge</h4>
+            <p data-i18n="knowledge.s4d">Meaning extracted</p>
+          </div>
+          <span class="knowledge-arrow">→</span>
+          <div class="knowledge-step">
+            <div class="k-icon">∞</div>
+            <h4 data-i18n="knowledge.s5">Memory</h4>
+            <p data-i18n="knowledge.s5d">Preserved forever</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOVERNANCE RECORDS -->
+    <section id="governance">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label" data-i18n="gov.label">Governance Records</div>
+          <h2 data-i18n="gov.title">Institutional governance, permanently recorded</h2>
+          <p data-i18n="gov.desc">Every proposal, decision, approval, execution, and archive — captured with institutional precision. No hype. No token voting. Pure governance record.</p>
+        </div>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="process-num">1</div>
+            <h4 data-i18n="gov.s1">Proposal</h4>
+            <p data-i18n="gov.s1d">Initiative formally submitted and recorded</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">2</div>
+            <h4 data-i18n="gov.s2">Decision</h4>
+            <p data-i18n="gov.s2d">Deliberation captured with full context</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">3</div>
+            <h4 data-i18n="gov.s3">Approval</h4>
+            <p data-i18n="gov.s3d">Authorized signatures permanently bound</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">4</div>
+            <h4 data-i18n="gov.s4">Execution</h4>
+            <p data-i18n="gov.s4d">Action taken and verified on record</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">5</div>
+            <h4 data-i18n="gov.s5">Archive</h4>
+            <p data-i18n="gov.s5d">Complete governance history preserved</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDENTITY RECORDS -->
+    <section id="identity" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label" data-i18n="id.label">Identity Records</div>
+          <h2 data-i18n="id.title">Identity becomes permanent truth</h2>
+          <p data-i18n="id.desc">From presence verification to permanent credential — identity records that are verifiable, auditable, and forever preserved.</p>
+        </div>
+        <div class="identity-flow">
+          <div class="identity-step">
+            <h4>Q-Presence</h4>
+            <p data-i18n="id.s1d">Biometric and presence verification establishes authentic identity</p>
+          </div>
+          <div class="identity-step">
+            <h4 data-i18n="id.s2">Verification</h4>
+            <p data-i18n="id.s2d">Multi-factor identity confirmation with cryptographic binding</p>
+          </div>
+          <div class="identity-step">
+            <h4 data-i18n="id.s3">Credential</h4>
+            <p data-i18n="id.s3d">Verifiable credential issued and linked to identity record</p>
+          </div>
+          <div class="identity-step">
+            <h4>EnteleLEDGER</h4>
+            <p data-i18n="id.s4d">Permanent, auditable identity record preserved in truth layer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTERPRISE RECORDS -->
+    <section id="enterprise">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label" data-i18n="ent.label">Enterprise Records</div>
+          <h2 data-i18n="ent.title">Enterprise-grade record management</h2>
+          <p data-i18n="ent.desc">Compliance, audit, infrastructure, certificates, and contracts — the record types that institutions depend on for accountability and trust.</p>
+        </div>
+        <div class="enterprise-grid">
+          <div class="enterprise-card">
+            <div class="e-icon">▣</div>
+            <h4 data-i18n="ent.c1">Compliance</h4>
+            <p data-i18n="ent.c1d">Regulatory adherence records and policy enforcement trails</p>
+          </div>
+          <div class="enterprise-card">
+            <div class="e-icon">◎</div>
+            <h4 data-i18n="ent.c2">Audit</h4>
+            <p data-i18n="ent.c2d">Complete audit trails for financial and operational review</p>
+          </div>
+          <div class="enterprise-card">
+            <div class="e-icon">⬡</div>
+            <h4 data-i18n="ent.c3">Infrastructure</h4>
+            <p data-i18n="ent.c3d">System deployments, configurations, and state changes</p>
+          </div>
+          <div class="enterprise-card">
+            <div class="e-icon">◈</div>
+            <h4 data-i18n="ent.c4">Certificates</h4>
+            <p data-i18n="ent.c4d">Digital certificates, attestations, and credentials</p>
+          </div>
+          <div class="enterprise-card">
+            <div class="e-icon">⚖</div>
+            <h4 data-i18n="ent.c5">Contracts</h4>
+            <p data-i18n="ent.c5d">Legal agreements with immutable execution records</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIVILIZATION TIMELINE -->
+    <section id="civ-timeline" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label" data-i18n="civ.label">Civilization Timeline</div>
+          <h2 data-i18n="civ.title">Records flow through time</h2>
+          <p data-i18n="civ.desc">Past, present, and future — every record exists in the continuum of civilization memory. Permanence is not a feature. It is the foundation.</p>
+        </div>
+        <div class="civ-timeline">
+          <div class="civ-axis">
+            <div class="civ-track"></div>
+            <div class="civ-marker"></div>
+            <div class="civ-records"></div>
+            <div class="civ-records" style="animation-delay:3s"></div>
+            <div class="civ-records" style="animation-delay:6s"></div>
+            <div class="civ-zone past">
+              <h3 data-i18n="civ.past">Past</h3>
+              <p data-i18n="civ.pastd">Archived records form the foundation of institutional memory and historical truth.</p>
+            </div>
+            <div class="civ-zone present">
+              <h3 data-i18n="civ.present">Present</h3>
+              <p data-i18n="civ.presentd">Active records are being created, verified, and preserved in real time.</p>
+            </div>
+            <div class="civ-zone future">
+              <h3 data-i18n="civ.future">Future</h3>
+              <p data-i18n="civ.futured">Every record created today becomes tomorrow's verified history.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM HIERARCHY -->
+    <section id="hierarchy" class="dark">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label" data-i18n="hier.label">Ecosystem Hierarchy</div>
+          <h2 data-i18n="hier.title">The ENTELΞKRON civilization stack</h2>
+          <p data-i18n="hier.desc">Each system serves a distinct purpose. EnteleLEDGER sits at the center as the permanent truth layer — where all records converge.</p>
+        </div>
+        <div class="hierarchy">
+          <div class="hierarchy-card"><strong>SOVRA</strong><span data-i18n="hier.sovra">Intelligence</span></div>
+          <div class="hierarchy-card"><strong>ENTELΞKRON</strong><span data-i18n="hier.entel">Infrastructure</span></div>
+          <div class="hierarchy-card"><strong>EnteleLINK</strong><span data-i18n="hier.link">Connectivity</span></div>
+          <div class="hierarchy-card"><strong>EnteleSCAN</strong><span data-i18n="hier.scan">Observability</span></div>
+          <div class="hierarchy-card"><strong>ChronoSeal</strong><span data-i18n="hier.chrono">Proof</span></div>
+          <div class="hierarchy-card"><strong>GraphVAULT</strong><span data-i18n="hier.graph">Knowledge</span></div>
+          <div class="hierarchy-card"><strong>Q-Presence</strong><span data-i18n="hier.qp">Identity</span></div>
+          <div class="hierarchy-card"><strong>EnteleVAULT</strong><span data-i18n="hier.vault">Preservation</span></div>
+          <div class="hierarchy-card ledger"><strong>EnteleLEDGER</strong><span data-i18n="hier.ledger">Permanent Truth — The Record Layer</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact">
-      <div class="wrap contact">
-        <div>
-          <h2>Build trusted infrastructure with EnteleLEDGER.</h2>
-          <p>For enterprise partnerships, institutional pilots, government-grade registries, asset verification systems, or ecosystem integrations, contact the TVK Labs team.</p>
-          <div class="cta"><a class="btn primary" href="mailto:contact@enteleledger.com">Contact Team</a><a class="btn secondary" href="mailto:hq@tvk.group">TVK Group HQ</a></div>
-        </div>
-        <div class="contact-list">
-          <div class="contact-item">contact@enteleledger.com</div>
-          <div class="contact-item">legal@tvk.group</div>
-          <div class="contact-item">hq@tvk.group</div>
-          <div class="contact-item">Türkiye • United Kingdom • Europe • Global</div>
+      <div class="wrap">
+        <div class="contact-section">
+          <div>
+            <h2 data-i18n="contact.title">Record truth with EnteleLEDGER</h2>
+            <p data-i18n="contact.desc">For institutional partnerships, governance record systems, identity infrastructure, enterprise compliance, or ecosystem integrations — connect with the TVK Labs team.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="mailto:contact@enteleledger.com" data-i18n="contact.btn1">Contact Team</a>
+              <a class="btn btn-secondary" href="mailto:hq@tvk.group" data-i18n="contact.btn2">TVK Group HQ</a>
+            </div>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item">contact@enteleledger.com</div>
+            <div class="contact-item">legal@tvk.group</div>
+            <div class="contact-item">hq@tvk.group</div>
+            <div class="contact-item" data-i18n="contact.regions">Türkiye · United Kingdom · Europe · Global</div>
+          </div>
         </div>
       </div>
     </section>
@@ -207,30 +515,12 @@
 
   <footer>
     <div class="wrap foot">
-      <div><b>EnteleLEDGER™</b> — Enterprise Distributed Ledger Infrastructure.</div>
-      <div>© 2026 TVK Labs / TVK Group. All rights reserved.</div>
+      <div><b>EnteleLEDGER</b> — <span data-i18n="footer.tag">The Permanent Record Layer of Civilization.</span></div>
+      <div data-i18n="footer.copy">© 2026 TVK Labs / TVK Group. All rights reserved.</div>
     </div>
   </footer>
 
-  <script>
-    const translations = {
-      tr:{hero:'Dijital ekonomiler için güven ve kayıt altyapısı.',btn:'Ortaklık Talep Et'},
-      de:{hero:'Die Vertrauens- und Ledger-Infrastruktur für digitale Ökonomien.',btn:'Partnerschaft anfragen'},
-      fr:{hero:'La couche de confiance pour les économies numériques intelligentes.',btn:'Demander un partenariat'},
-      es:{hero:'La capa de confianza para economías digitales inteligentes.',btn:'Solicitar asociación'},
-      it:{hero:'Il livello di fiducia per economie digitali intelligenti.',btn:'Richiedi partnership'},
-      en:{hero:'The trust layer for intelligent digital economies.',btn:'Request Partnership'}
-    };
-    document.querySelectorAll('.lang-menu a').forEach(a=>{
-      a.addEventListener('click',e=>{
-        e.preventDefault();
-        const l=a.dataset.lang;
-        if(translations[l]){
-          document.querySelector('h1').innerHTML = translations[l].hero.replace('trust','<span class="grad">trust</span>');
-          document.querySelector('.btn.primary').textContent = translations[l].btn;
-        }
-      });
-    });
-  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
