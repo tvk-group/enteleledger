@@ -12,11 +12,22 @@ https://enteleledger.com
 - Vercel static hosting
 
 ## Structure
-- `index.html` — main page with all sections
-- `css/styles.css` — design system and animations
-- `js/main.js` — interactions and language switching
-- `js/i18n.js` — generated translations (run `node scripts/build-i18n.mjs` to rebuild)
+- `index.html` — main marketing site
+- `app.html` — mobile PWA record portal (like entelekron.app / sovraprotocol.com app)
+- `explorer.html`, `flow.html`, `trust.html` — app subpages
+- `manifest.webmanifest` + `sw.js` — PWA install support
+- `css/styles.css` — marketing site design system
+- `css/app.css` — mobile app shell styles
+- `js/main.js` — marketing site interactions and language switching
+- `js/app.js`, `js/app-i18n.js`, `js/pwa.js` — record portal app
+- `js/i18n.js` — generated marketing translations (run `node scripts/build-i18n.mjs` to rebuild)
 - `scripts/` — locale source files and i18n build script
+- `assets/brand/` — app icons
+
+## Record Portal App
+Installable PWA at **https://www.enteleledger.com/app.html** (configure `app.enteleledger.com` CNAME to Vercel for parity with entelekron.app).
+
+Features: Record Explorer, Record Flow, Trust Architecture, home-screen install on iOS/Android.
 
 ## Deployment
 Vercel settings (static site — no build step):

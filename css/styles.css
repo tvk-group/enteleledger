@@ -1180,6 +1180,61 @@ footer {
   color: var(--muted);
   font-size: 14px;
 }
+
+/* Record portal app promo (main site) */
+.app-promo {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.app-promo-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.install-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+.install-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(7, 17, 31, 0.06);
+}
+.install-card .install-platform {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.install-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.app-promo-note {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.app-promo-note a { color: var(--blue); font-weight: 700; }
+@media (max-width: 768px) {
+  .install-grid { grid-template-columns: 1fr; }
+}
+
 .foot {
   display: flex;
   justify-content: space-between;

@@ -111,6 +111,9 @@
 
     localStorage.setItem('entele-lang', lang);
     updateExplorerDetail(getActiveCategory());
+    if (window.ENTELE_APP && window.ENTELE_APP.applyAppI18n) {
+      window.ENTELE_APP.applyAppI18n();
+    }
   }
 
   function buildLangMenu() {

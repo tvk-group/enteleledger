@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Trust Architecture | EnteleLEDGER</title>
+  <meta name="theme-color" content="#071b3a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/assets/brand/icon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css?v=1" />
+</head>
+<body class="app-shell">
+  <header class="app-topbar">
+    <a href="app.html" class="brand-mini"><span class="mark-sm">EL</span> EnteleLEDGER</a>
+    <a href="app.html">← Back</a>
+  </header>
+  <main class="app-page">
+    <h1 data-app-i18n="trustTitle">Trust Architecture</h1>
+    <p class="page-desc" data-app-i18n="trustDesc">How proof becomes record, and record becomes knowledge.</p>
+    <div class="app-trust-stack">
+      <div class="app-trust-layer">
+        <h3>ChronoSeal</h3>
+        <p data-app-i18n="trustChrono">Cryptographic proof and sovereign timestamping</p>
+      </div>
+      <div class="app-trust-arrow">↓</div>
+      <div class="app-trust-layer primary">
+        <h3>EnteleLEDGER</h3>
+        <p data-app-i18n="trustLedger">Permanent record layer — system of truth</p>
+      </div>
+      <div class="app-trust-arrow">↓</div>
+      <div class="app-trust-layer">
+        <h3>GraphVAULT</h3>
+        <p data-app-i18n="trustGraph">Verified records become structured knowledge</p>
+      </div>
+    </div>
+  </main>
+  <nav class="app-tabbar" aria-label="App navigation">
+    <a href="app.html"><span class="tab-icon">⌂</span><span data-app-i18n="tabHome">Home</span></a>
+    <a href="explorer.html"><span class="tab-icon">◉</span><span data-app-i18n="tabExplorer">Explorer</span></a>
+    <a href="flow.html"><span class="tab-icon">◇</span><span data-app-i18n="tabFlow">Flow</span></a>
+    <a href="trust.html" class="active"><span class="tab-icon">◈</span><span data-app-i18n="tabTrust">Trust</span></a>
+  </nav>
+  <script src="/js/app-i18n.js?v=1"></script>
+  <script src="/js/app.js?v=1"></script>
+  <script src="/js/pwa.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "id": "https://www.enteleledger.com/app.html",
+  "name": "EnteleLEDGER Record Portal",
+  "short_name": "EnteleLEDGER",
+  "description": "Permanent record layer portal — explore records, verify truth, and access civilization memory from your phone.",
+  "start_url": "/app.html?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "browser"],
+  "orientation": "any",
+  "background_color": "#07111f",
+  "theme_color": "#071b3a",
+  "lang": "en",
+  "categories": ["business", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/brand/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/brand/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Record Explorer",
+      "short_name": "Explorer",
+      "url": "/explorer.html",
+      "icons": [{ "src": "/assets/brand/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Record Flow",
+      "short_name": "Flow",
+      "url": "/flow.html",
+      "icons": [{ "src": "/assets/brand/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Trust Architecture",
+      "short_name": "Trust",
+      "url": "/trust.html",
+      "icons": [{ "src": "/assets/brand/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>EnteleLEDGER Record Portal</title>
+  <meta name="description" content="EnteleLEDGER record portal — explore permanent records, verify truth, and access civilization memory from your phone." />
+  <meta name="theme-color" content="#071b3a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="EnteleLEDGER" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/assets/brand/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/brand/icon.svg" />
+  <link rel="canonical" href="https://www.enteleledger.com/app.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css?v=1" />
+</head>
+<body class="app-shell">
+  <header class="app-topbar">
+    <a href="app.html" class="brand-mini">
+      <span class="mark-sm">EL</span>
+      EnteleLEDGER
+    </a>
+    <a href="https://www.enteleledger.com/">Full site</a>
+  </header>
+
+  <main>
+    <section class="app-hero">
+      <img src="/assets/brand/icon.svg" alt="EnteleLEDGER" class="app-icon" width="72" height="72" />
+      <div class="app-badge" data-app-i18n="badge">Truth Layer · Record Portal</div>
+      <h1 data-app-i18n="heroTitle">EnteleLEDGER Record Portal</h1>
+      <p class="lead" data-app-i18n="heroLead">Install the record portal on your phone — explore permanent records, verify truth, and access civilization memory from a home-screen icon.</p>
+      <button type="button" id="pwa-install-btn" hidden data-app-i18n="installBtn">Install app</button>
+    </section>
+
+    <nav class="app-actions" aria-label="Record portal quick actions">
+      <a class="app-action-card primary" href="explorer.html">
+        <span class="action-icon">◉</span>
+        <strong data-app-i18n="actionExplorer">Record Explorer</strong>
+        <span data-app-i18n="actionExplorerD">Browse record categories</span>
+      </a>
+      <a class="app-action-card" href="flow.html">
+        <span class="action-icon">◇</span>
+        <strong data-app-i18n="actionFlow">Record Flow</strong>
+        <span data-app-i18n="actionFlowD">How events become records</span>
+      </a>
+      <a class="app-action-card" href="trust.html">
+        <span class="action-icon">◈</span>
+        <strong data-app-i18n="actionTrust">Trust Architecture</strong>
+        <span data-app-i18n="actionTrustD">ChronoSeal → Ledger → GraphVAULT</span>
+      </a>
+      <a class="app-action-card" href="https://www.enteleledger.com/#civ-timeline">
+        <span class="action-icon">∞</span>
+        <strong data-app-i18n="actionTimeline">Civilization Timeline</strong>
+        <span data-app-i18n="actionTimelineD">Records through time</span>
+      </a>
+      <a class="app-action-card" href="mailto:contact@enteleledger.com">
+        <span class="action-icon">✉</span>
+        <strong data-app-i18n="actionContact">Contact</strong>
+        <span data-app-i18n="actionContactD">Institutional partnerships</span>
+      </a>
+      <a class="app-action-card" href="https://www.enteleledger.com/#memory-core">
+        <span class="action-icon">⬡</span>
+        <strong>Memory Core</strong>
+        <span>Civilization memory architecture</span>
+      </a>
+    </nav>
+
+    <section class="app-section" id="install">
+      <h2 data-app-i18n="installTitle">How to install</h2>
+      <div class="install-steps">
+        <div class="install-step" id="pwa-ios-hint" hidden>
+          <span class="install-platform">iPhone / iPad</span>
+          <p data-app-i18n="iosStep">Tap Share in Safari, then Add to Home Screen to install EnteleLEDGER.</p>
+        </div>
+        <div class="install-step">
+          <span class="install-platform">Android</span>
+          <p data-app-i18n="androidStep">Chrome → app.enteleledger.com → menu → Install app or Add to Home screen</p>
+        </div>
+        <div class="install-step">
+          <span class="install-platform">Desktop</span>
+          <p data-app-i18n="desktopStep">Chrome or Edge → install icon in the address bar, or bookmark app.enteleledger.com</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="app-site-link"><span data-app-i18n="fullSite">Full marketing site:</span> <a href="https://www.enteleledger.com/">enteleledger.com</a></p>
+  </main>
+
+  <div id="pwa-install-banner" hidden>
+    <p data-app-i18n="installBanner">Add EnteleLEDGER to your home screen</p>
+    <button type="button" class="btn-sm" id="pwa-install-banner-btn" data-app-i18n="installBtn">Install</button>
+  </div>
+
+  <nav class="app-tabbar" aria-label="App navigation">
+    <a href="app.html" class="active">
+      <span class="tab-icon">⌂</span>
+      <span data-app-i18n="tabHome">Home</span>
+    </a>
+    <a href="explorer.html">
+      <span class="tab-icon">◉</span>
+      <span data-app-i18n="tabExplorer">Explorer</span>
+    </a>
+    <a href="flow.html">
+      <span class="tab-icon">◇</span>
+      <span data-app-i18n="tabFlow">Flow</span>
+    </a>
+    <a href="trust.html">
+      <span class="tab-icon">◈</span>
+      <span data-app-i18n="tabTrust">Trust</span>
+    </a>
+  </nav>
+
+  <script src="/js/app-i18n.js?v=1"></script>
+  <script src="/js/app.js?v=1"></script>
+  <script src="/js/pwa.js?v=1"></script>
+</body>
+</html>
