@@ -1,6 +1,6 @@
 # EnteleLEDGER Website
 
-Official website for EnteleLEDGER — the Permanent Record Layer (Truth Layer) of the ENTELΞKRON ecosystem.
+Official website for EnteleLEDGER — the Permanent Record Layer (Truth Layer) of the ENTELΞKRON ecosystem. The long-term Financial Mesh direction adds an authoritative exact-decimal ledger and reconciliation architecture for planned TVKUSD, EnteleMINT, EnteleTREASURY, payments, custody, tokenization, and institutional services.
 
 ## Domain
 https://enteleledger.com
@@ -29,7 +29,7 @@ Installable PWA at **https://www.enteleledger.com/app.html** (configure `app.ent
 
 Features: Record Explorer, Record Flow, Trust Architecture, home-screen install on iOS/Android.
 
-## Deployment
+## Financial architecture\n\n- [TVKUSD Ledger and Reconciliation Specification](./docs/TVKUSD_LEDGER_AND_RECONCILIATION.md)\n\nENK and TVKUSD remain separate assets and accounting domains. The specification introduces no live stablecoin, reserve, customer account, custody, payment, or money movement. Production is disabled until independent legal, accounting, reserve, security, and operational activation.\n\n## Deployment
 Vercel settings (static site — no build step):
 - Framework Preset: Other
 - Build Command: leave empty
