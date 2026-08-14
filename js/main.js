@@ -248,3 +248,20 @@
     init();
   }
 })();
+
+
+/* Shared SOVRA AI Advisor — centrally governed by sovra.network. */
+(function loadSovraAdvisor() {
+  if (document.getElementById("sovra-ai-advisor-loader")) return;
+  const script = document.createElement("script");
+  script.id = "sovra-ai-advisor-loader";
+  script.src = "https://www.sovra.network/assets/sovra-advisor.js";
+  script.dataset.api = "https://www.sovra.network/api/advisor";
+  script.dataset.site = "EnteleLEDGER";
+  script.dataset.accent = "#355cff";
+  script.dataset.context = "public";
+  script.dataset.support = "mailto:contact@enteleledger.com";
+  script.dataset.privacy = "https://www.sovra.network/advisor-privacy/";
+  script.async = true;
+  (document.body || document.head).appendChild(script);
+})();
