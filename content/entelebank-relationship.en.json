@@ -1,0 +1,8 @@
+{
+  "entity": "EnteleBANK LTD",
+  "canonicalUrl": "https://www.entelebank.com",
+  "relationship": "EnteleLEDGER is a separate TVK Group ecosystem infrastructure project. Its verifiable-record and ledger capabilities may be evaluated for future use within EnteleBANK only through formal architecture, security, data-governance, legal, outsourcing and regulatory assessment.",
+  "bankStatus": "EnteleBANK is a proposed UK banking institution in pre-authorisation development. It is not currently authorised by the PRA or FCA to accept deposits or provide regulated banking services.",
+  "boundary": "EnteleLEDGER is not a bank, bank account, deposit product, payment account or FSCS-protected service, and ecosystem affiliation does not make EnteleLEDGER an EnteleBANK banking service.",
+  "futureIntegration": "Any future integration must preserve regulated-entity accountability, customer protection, operational resilience, auditability, data controls and clear supplier/technology boundaries."
+}
