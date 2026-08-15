@@ -1,5 +1,5 @@
 /* EnteleLEDGER — PWA service worker (record portal shell cache) */
-const CACHE = "enteleledger-portal-v1";
+const CACHE = "enteleledger-portal-v2";
 const PRECACHE = [
   "/app.html",
   "/explorer.html",
@@ -11,6 +11,8 @@ const PRECACHE = [
   "/js/app.js",
   "/js/app-i18n.js",
   "/assets/brand/icon.svg",
+  "/assets/brand/logo-light.svg",
+  "/assets/brand/mark-light.svg",
   "/manifest.webmanifest",
 ];
 

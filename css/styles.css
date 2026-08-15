@@ -51,26 +51,15 @@ header {
   gap: 20px;
 }
 .brand {
-  display: flex;
   align-items: center;
-  gap: 12px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 0.02em;
+  display: flex;
+  flex: 0 0 auto;
 }
-.mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--blue-deep), var(--blue) 60%, var(--gold));
-  display: grid;
-  place-items: center;
-  color: white;
-  font-family: var(--font-body);
-  font-weight: 900;
-  font-size: 13px;
-  box-shadow: var(--shadow-gold);
+.brand-logo {
+  display: block;
+  height: auto;
+  max-width: 52vw;
+  width: 240px;
 }
 .navlinks {
   display: flex;

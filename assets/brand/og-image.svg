@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">EnteleLEDGER — From event to evidence. From evidence to trust.</title>
+  <desc id="desc">EnteleLEDGER development-stage record, proof-history and reconciliation infrastructure.</desc>
+  <defs>
+    <linearGradient id="bg" x1="42" y1="20" x2="1140" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="#030b17"/><stop offset=".55" stop-color="#071b3a"/><stop offset="1" stop-color="#020814"/></linearGradient>
+    <linearGradient id="rail" x1="50" y1="0" x2="1150" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#0b5cff"/><stop offset=".56" stop-color="#3d7dff"/><stop offset="1" stop-color="#b8943f"/></linearGradient>
+    <linearGradient id="pages" x1="7" y1="14" x2="69" y2="68" gradientUnits="userSpaceOnUse"><stop stop-color="#3d7dff"/><stop offset="1" stop-color="#0b5cff"/></linearGradient>
+    <linearGradient id="spine" x1="53" y1="15" x2="70" y2="82" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".58" stop-color="#9eb6cf"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#00040b" flood-opacity=".7"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".13" stroke="#7fa5c8"><path d="M0 510 300 386 580 492 870 340 1200 448"/><path d="M0 558 300 434 580 540 870 388 1200 496"/><path d="M150 630 430 435M390 630 610 505M650 630 835 418M920 630 1085 410"/></g>
+  <path d="M32 600C290 570 480 610 690 575s322-80 510-35" stroke="url(#rail)" stroke-width="5" fill="none"/>
+  <g transform="translate(62 50) scale(.7)"><path d="M7 25 38 8l32 16-12 7-20-10-18 10 18 10-9 6L7 34Z" fill="url(#pages)"/><path d="m7 40 12-7 19 11 14-8 8 7-22 13L7 48Z" fill="url(#pages)"/><path d="m7 54 12-7 19 11 13-8 8 7-21 13L7 62Z" fill="url(#pages)"/><path d="M52 15h14v55h22v12H52Z" fill="url(#spine)"/><path d="M66 70h22l-7 12H66Z" fill="#d4af5a"/><circle cx="59" cy="15" r="12" fill="#d4af5a"/><circle cx="59" cy="15" r="8" fill="#071b3a"/><path d="m55 15 3 3 6-7" fill="none" stroke="#f1d58c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="132" y="102" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="650" letter-spacing="-1">Entele</text><text x="226" y="102" fill="#d4af5a" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="650" letter-spacing="-1">LEDGER</text>
+  <text x="62" y="190" fill="#d4af5a" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3">VERIFIED RECORD INFRASTRUCTURE</text>
+  <text x="62" y="274" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="59" font-weight="700" letter-spacing="-2"><tspan x="62">From event to evidence.</tspan><tspan x="62" y="345" fill="#a9bed3">From evidence to trust.</tspan></text>
+  <text x="62" y="411" fill="#98acc0" font-family="Arial, Helvetica, sans-serif" font-size="21"><tspan x="62">Records · proof history · reconciliation</tspan><tspan x="62" y="443">· multi-ledger coordination</tspan></text>
+  <text x="62" y="520" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">INFRASTRUCTURE IN DEVELOPMENT · NO LIVE CUSTODY, ISSUANCE OR VALUE MOVEMENT</text>
+  <text x="62" y="556" fill="#d4af5a" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">enteleledger.com</text>
+  <g transform="translate(790 136)" filter="url(#shadow)">
+    <rect width="340" height="286" rx="28" fill="#0a1b32" stroke="#3d7dff" stroke-opacity=".42"/>
+    <path d="M52 65h236M52 126h236M52 187h236M52 248h236" stroke="#233f63" stroke-width="2"/>
+    <path d="M78 65v183" stroke="url(#rail)" stroke-width="6"/>
+    <g fill="#071b3a" stroke="#d4af5a" stroke-width="3"><circle cx="78" cy="65" r="13"/><circle cx="78" cy="126" r="13"/><circle cx="78" cy="187" r="13"/><circle cx="78" cy="248" r="13"/></g>
+    <g fill="#d4af5a"><path d="m72 65 4 4 8-10 2 2-10 13-6-7Z"/><path d="m72 126 4 4 8-10 2 2-10 13-6-7Z"/><path d="m72 187 4 4 8-10 2 2-10 13-6-7Z"/><path d="m72 248 4 4 8-10 2 2-10 13-6-7Z"/></g>
+    <g fill="#c9d6e2" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="1"><text x="112" y="70">EVENT</text><text x="112" y="131">EVIDENCE</text><text x="112" y="192">RECORD</text><text x="112" y="253">AUDIT</text></g>
+  </g>
+</svg>

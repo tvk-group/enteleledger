@@ -1,0 +1,33 @@
+name: Brand quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify approved identity integration
+        run: npm run check:brand
+
+      - name: Parse JavaScript entry points
+        run: |
+          node --check js/main.js
+          node --check js/app.js
+          node --check js/app-i18n.js
+          node --check js/pwa.js
+
