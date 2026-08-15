@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150" role="img" aria-labelledby="title desc">
+  <title id="title">EnteleLEDGER</title>
+  <desc id="desc">EnteleLEDGER logo with verified ledger-spine mark.</desc>
+  <defs>
+    <linearGradient id="pages" x1="7" y1="14" x2="69" y2="68" gradientUnits="userSpaceOnUse"><stop stop-color="#3d7dff"/><stop offset="1" stop-color="#0b5cff"/></linearGradient>
+    <linearGradient id="spine" x1="53" y1="15" x2="70" y2="82" gradientUnits="userSpaceOnUse"><stop stop-color="#ffffff"/><stop offset=".58" stop-color="#9eb6cf"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <linearGradient id="ledger" x1="500" y1="38" x2="850" y2="112" gradientUnits="userSpaceOnUse"><stop stop-color="#3d7dff"/><stop offset=".5" stop-color="#b4c5d6"/><stop offset="1" stop-color="#d4af5a"/></linearGradient>
+  </defs>
+  <g transform="translate(8 9) scale(1.38)">
+    <path d="M7 25 38 8l32 16-12 7-20-10-18 10 18 10-9 6L7 34Z" fill="url(#pages)"/>
+    <path d="m7 40 12-7 19 11 14-8 8 7-22 13L7 48Z" fill="url(#pages)"/><path d="m7 54 12-7 19 11 13-8 8 7-21 13L7 62Z" fill="url(#pages)"/>
+    <path d="M52 15h14v55h22v12H52Z" fill="url(#spine)"/><path d="M66 70h22l-7 12H66Z" fill="#d4af5a"/>
+    <circle cx="59" cy="15" r="12" fill="#d4af5a"/><circle cx="59" cy="15" r="8" fill="#071b3a"/><path d="m55 15 3 3 6-7" fill="none" stroke="#f1d58c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="152" y="103" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="650" letter-spacing="-3">Entele</text>
+  <text x="368" y="103" fill="url(#ledger)" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="650" letter-spacing="-3">LEDGER</text>
+</svg>

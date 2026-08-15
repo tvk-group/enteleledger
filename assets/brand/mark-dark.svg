@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">EnteleLEDGER mark</title>
+  <desc id="desc">Layered records form an E beside an immutable ledger spine and verified L.</desc>
+  <defs>
+    <linearGradient id="pages" x1="7" y1="14" x2="69" y2="68" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b5cff"/>
+      <stop offset="1" stop-color="#073b9b"/>
+    </linearGradient>
+    <linearGradient id="spine" x1="53" y1="15" x2="70" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071b3a"/>
+      <stop offset=".58" stop-color="#173c68"/>
+      <stop offset="1" stop-color="#071b3a"/>
+    </linearGradient>
+  </defs>
+  <path d="M7 25 38 8l32 16-12 7-20-10-18 10 18 10-9 6L7 34Z" fill="url(#pages)"/>
+  <path d="m7 40 12-7 19 11 14-8 8 7-22 13L7 48Z" fill="url(#pages)"/>
+  <path d="m7 54 12-7 19 11 13-8 8 7-21 13L7 62Z" fill="url(#pages)"/>
+  <path d="M52 15h14v55h22v12H52Z" fill="url(#spine)"/>
+  <path d="M66 70h22l-7 12H66Z" fill="#b8943f"/>
+  <circle cx="59" cy="15" r="12" fill="#b8943f"/>
+  <circle cx="59" cy="15" r="8" fill="#071b3a"/>
+  <path d="m55 15 3 3 6-7" fill="none" stroke="#d9bc70" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
