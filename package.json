@@ -4,6 +4,7 @@
   "description": "EnteleLEDGER — The Permanent Record Layer of the ENTELΞKRON Ecosystem",
   "scripts": {
     "build:i18n": "node scripts/build-i18n.mjs",
-    "check:brand": "node scripts/check-brand.mjs"
+    "check:brand": "node scripts/check-brand.mjs",
+    "check:seo": "node scripts/check-seo.mjs"
   }
 }
