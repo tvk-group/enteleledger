@@ -24,6 +24,9 @@ jobs:
       - name: Verify approved identity integration
         run: npm run check:brand
 
+      - name: Verify SEO metadata and crawler discovery
+        run: npm run check:seo
+
       - name: Parse JavaScript entry points
         run: |
           node --check js/main.js
