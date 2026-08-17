@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#071b3a" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>EnteleLEDGER is offline</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #030b17;
+        color: #f7fbff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100svh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+        background:
+          radial-gradient(circle at 18% 12%, rgba(61, 125, 255, 0.28), transparent 38%),
+          linear-gradient(145deg, #071b3a 0%, #030b17 72%);
+      }
+
+      main {
+        width: min(570px, 100%);
+        padding: clamp(28px, 6vw, 48px);
+        border: 1px solid rgba(212, 175, 90, 0.2);
+        border-radius: 28px;
+        background: rgba(5, 17, 36, 0.9);
+        box-shadow: 0 30px 90px rgba(0, 4, 16, 0.58);
+        text-align: center;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+      }
+
+      img {
+        width: 84px;
+        height: 84px;
+        object-fit: contain;
+        border-radius: 22px;
+        box-shadow: 0 14px 34px rgba(0, 4, 18, 0.55);
+      }
+
+      h1 {
+        margin: 24px 0 10px;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+      }
+
+      p {
+        margin: 0 auto;
+        max-width: 45ch;
+        color: rgba(231, 241, 255, 0.76);
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        margin-top: 26px;
+        padding: 0 22px;
+        border-radius: 14px;
+        color: #030b17;
+        background: linear-gradient(135deg, #ffffff, #d4af5a);
+        box-shadow: 0 12px 26px rgba(61, 125, 255, 0.24);
+        font-weight: 790;
+        text-decoration: none;
+      }
+
+      a:focus-visible {
+        outline: 3px solid rgba(61, 125, 255, 0.85);
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="/assets/brand/icon-192.png" alt="EnteleLEDGER" width="84" height="84" />
+      <h1>You are offline</h1>
+      <p>
+        EnteleLEDGER could not reach the network. Reconnect before opening any future record, evidence, identity, verification or account workflow. This offline page never stores or displays private record data.
+      </p>
+      <a href="/app.html">Try EnteleLEDGER again</a>
+    </main>
+  </body>
+</html>
